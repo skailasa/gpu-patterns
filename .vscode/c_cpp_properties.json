@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/sk937/.local/share/uv/python/cpython-3.13.1-linux-x86_64-gnu/include/python3.13/",
+                "/home/sk937/spack/var/spack/environments/cuda/.spack-env/view/include/"
+            ],
+            "defines": [
+                "__CUDACC__"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "linux-gcc-x64"
+
+        }
+    ],
+    "version": 4
+}
