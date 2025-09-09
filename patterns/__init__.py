@@ -1,4 +1,4 @@
-from . import cpu_patterns as cpu_patterns
-from . import gpu_patterns as gpu_patterns
+from .gpu_patterns import kernels as gpu_kernels
+from .cpu_patterns import kernels as cpu_kernels
 
 
