@@ -1,10 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "gpu-patterns"
 version = "0.1.0"
-description = "Add your description here"
+description = "Common GPU Parallel Patterns"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"  # (3.13 may not be supported by torch yet)
 dependencies = [
     "torch",
     "numpy",
 ]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["gpu_patterns*"]
+
+[tool.setuptools.package-data]
+gpu_patterns = ["kernels/*"]
