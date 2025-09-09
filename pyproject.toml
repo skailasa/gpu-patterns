@@ -3,11 +3,11 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "gpu-patterns"
+name = "kernel-patterns"
 version = "0.1.0"
-description = "Common GPU Parallel Patterns"
+description = "Common CPU and GPU Parallel Patterns"
 readme = "README.md"
-requires-python = ">=3.10"  # (3.13 may not be supported by torch yet)
+requires-python = ">=3.10"
 dependencies = [
     "torch",
     "numpy",
@@ -15,7 +15,7 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["gpu_patterns*"]
+include = ["gpu_patterns*", "cpu_patterns*"]
 
 [tool.setuptools.package-data]
-gpu_patterns = ["kernels/*"]
+gpu_patterns = ["gpu_patterns/kernels/*"]

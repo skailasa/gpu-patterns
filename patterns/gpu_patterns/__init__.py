@@ -13,7 +13,7 @@ sources = [str(p) for p in sources]
 os.environ["TORCH_CUDA_ARCH_LIST"] = "8.9"
 
 kernels = load(
-    name="my_ext",
+    name="gpu_kernels",
     sources=sources,
     extra_cflags=["-O3"],
     extra_cuda_cflags=["-O3"],
