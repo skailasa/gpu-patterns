@@ -52,10 +52,9 @@ void two_dim_transpose_blocked_kernel(const T* __restrict in, T* __restrict out,
     }
 }
 
-
 // ---- kernel (contiguous C-order) ----
 template <typename T>
-void two_dim_prefix_sum_kernel(const T* in, T* out, py::ssize_t H, py::ssize_t W) {
+void two_dim_prefix_sum_kernel(const T* __restrict in, T*  __restrict out, py::ssize_t H, py::ssize_t W) {
 
     // parallelise across rows, heap allocated
     // can make stack allocated with std::vector<T, size> can't do push back
